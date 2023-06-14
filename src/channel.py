@@ -13,11 +13,10 @@ def printj(dict_to_print: dict) -> None:
     print(json.dumps(dict_to_print, indent=2, ensure_ascii=False))
 
 
-# youtube = build('youtube', 'v3', developerKey=api_key)
-
-
 class Channel:
     """Класс для ютуб-канала"""
+
+    # создать специальный объект для работы с API
     youtube = build('youtube', 'v3', developerKey=api_key)
 
     def __init__(self, channel_id: str) -> None:
